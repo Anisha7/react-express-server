@@ -27,8 +27,40 @@ app.get('/about', (req, res) => {
 // Test this route with: http://localhost:4000/random?n=99
 // Where n=99 sets the range of the random number returned
 app.get('/random', (req, res) => {
+  const { n, die, num } = req.query;
+  let v
+  let value
+
+  if (die) {
+    if (num) {
+      v = randomRolls(num, die)
+    } else {
+      v = randomRolls(1, die)
+    }
+  }
+  if (n) {
+    value = random(n)
+  }
+
+  res.json({
+    n: value,
+    die: v,
+  })
+})
+
+app.get(`/random/${n}`, (req, res)=> {
+  
+  let value
+  if (n) {
+    value = random(n)
+  }
+
+  res.json({n: value});
+})
+
+app.get('/randomD', (req, res) => {
   const { n } = req.query
-  const value = random(n)
+  const value = randomD(n)
   res.json({ value })
 })
 

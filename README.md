@@ -67,6 +67,8 @@ Currently the API endpoint '/random/?n=num' returns a random number from 0 to nu
 	- The API should read well and be self documenting
 	- The JSON returned should be intuitive unambiguous
 
+Done
+
 **Challenge 2** 
 
 You need a function to simulate die rolls. Currently there is a stubbed function `randomD(n)`. This function takes a number n as a parameter. It should return a number from 1 to n. 
@@ -77,6 +79,8 @@ You need a function to simulate die rolls. Currently there is a stubbed function
 	- Your API should be intuitive and self documenting
 	- The JSON returned should be intuitive
 
+Done
+
 **Challenge 3** 
 
 We need to a function to generate a series of die rolls. This function is stubbed in as `randomRolls(n, s)`, `n` is number of dice to roll, and `s` is number of sides possessed by each die. This function should return an array of random numbers. 
@@ -85,17 +89,24 @@ We need to a function to generate a series of die rolls. This function is stubbe
 	- all elements should whole numbers
 	- Each element should be value of 1 to `s`
 
+Done
+
 **Challenge 4** 
 
 You need to modify the API to work with the new functions. Currently You can use the `/random/?n=6` to get a random between 0 and 5. Your job is to add an option that returns a die roll. This should be a number from 1 to n. For excample: 
 
-- `/random/?die=6` should return a number from 1 to 6
+- `/random/?die=6&n=99` should return a number from 1 to 6
+- `/random/?die=12` should return a number from 1 to 12
+
+Done
 
 **Challenge 5** 
 
 You need to expand your API to return a number of die rolls. This new call should return an array of random numbers
 
 - `/random/?num=3&die=6` should return an array of 3 numbers from 1 to 6
+
+Done
 
 ##Challenge 6** 
 
